@@ -10,7 +10,6 @@ from django.conf import settings
 openai_api_key = settings.OPENAI_API_KEY
 openai.api_key = openai_api_key
 
-print(settings.OPENAI_API_KEY)
 def ask_openai(message):
     response = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
