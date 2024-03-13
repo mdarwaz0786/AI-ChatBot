@@ -59,12 +59,13 @@
   }
 
   .input-group {
-    margin-bottom: 1rem;
+    margin-bottom:0.5rem;
   }
 
   .footer {
     text-align: center;
   }
+
 
   .card {
     border: none;
@@ -86,7 +87,7 @@
       <a style="color: yellow" href="register">Register</a>
     </div>
     {% endif %}
-    <div class="card-body messages-box">
+    <div class="card-body messages-box chat-result">
       <ul class="list-unstyled messages-list">
         {% for chat in chats %} {% if chat.user == request.user %}
         <li class="message sent">
@@ -112,6 +113,11 @@
     <br /><br />
     <br /><br />
     <br /><br />
+    <br /><br />
+    <br /><br />
+    <br /><br />
+    <br /><br />
+    <br/>
   </div>
   <form class="message-form">
     {%csrf_token%}
