@@ -5,10 +5,12 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from .models import Chat
 from django.utils import timezone
+from django.conf import settings
 
-openai_api_key = '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'
+openai_api_key = settings.OPENAI_API_KEY
 openai.api_key = openai_api_key
 
+print(settings.OPENAI_API_KEY)
 def ask_openai(message):
     response = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
